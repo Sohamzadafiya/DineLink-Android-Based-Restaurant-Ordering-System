@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/backgroundImage"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/dinelink_mainbg"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <LinearLayout
+        android:id="@+id/contentLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        app:layout_constraintVertical_bias="0.0"
+        app:layout_constraintBottom_toBottomOf="@+id/backgroundImage"
+        app:layout_constraintEnd_toEndOf="@+id/backgroundImage"
+        app:layout_constraintStart_toStartOf="@+id/backgroundImage"
+        app:layout_constraintTop_toTopOf="@+id/backgroundImage">
+
+
+        <LinearLayout
+            android:id="@+id/dinelink_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="70dp"
+            android:gravity="center"
+            android:orientation="horizontal"
+            >
+
+            <!-- ImageView -->
+            <ImageView
+                android:layout_width="52dp"
+                android:layout_height="52dp"
+                android:src="@drawable/dine_link_tp_logo_black"
+                android:paddingHorizontal="1dp"/>
+
+            <!-- Space view to create dynamic space -->
+            <Space
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+
+            <!-- TextView -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/joti_one"
+                android:text="DineLink"
+                android:layout_marginTop="3dp"
+                android:textSize="35sp"
+                android:textColor="#000000"
+                android:paddingHorizontal="10dp"/>
+
+        </LinearLayout>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="80dp"
+            android:fontFamily="@font/sahitya"
+            android:gravity="center"
+            android:text="CHOOSE YOUR ROLE"
+            android:textSize="30dp"
+            android:textStyle="bold"
+            android:textColor="#000000">
+
+        </TextView>
+
+        <LinearLayout
+            android:id="@+id/dinelink_hotel_role"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:background="@drawable/rectangle_1_shape"
+            android:gravity="center"
+            android:onClick="restaurantLogin"
+            android:orientation="horizontal"
+            >
+
+            <!-- ImageView -->
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/image_1"
+                android:paddingStart="20dp"/>
+
+            <!-- Space view to create dynamic space -->
+            <Space
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+
+            <!-- TextView -->
+            <TextView
+                android:id="@+id/textView6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/sahitya"
+                android:text="Food Provider"
+                android:textColor="#000000"
+                android:textSize="28sp"
+                android:paddingHorizontal="20dp"
+                android:paddingVertical="10dp"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/dinelink_customer_role"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:background="@drawable/rectangle_1_shape"
+            android:gravity="center"
+            android:onClick="customerLogin"
+            android:orientation="horizontal"
+            >
+
+
+            <!-- ImageView -->
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/image_3"
+                android:paddingStart="20dp"/>
+
+            <!-- Space view to create dynamic space -->
+            <Space
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+
+            <!-- TextView -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/sahitya"
+                android:text="I'm Hungry"
+                android:textSize="28sp"
+                android:textColor="#000000"
+                android:paddingHorizontal="33dp"
+                android:paddingVertical="10dp"/>
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="120dp"
+            android:fontFamily="@font/itim"
+            android:gravity="center"
+            android:paddingHorizontal="60dp"
+            android:text="@string/__food_is_love_served_on_a_plate___string"
+            android:textSize="25dp"
+            android:textColor="#000000">
+
+        </TextView>
+
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
